@@ -1,0 +1,118 @@
+2016-02-14 13:37:37.705  INFO 6962 [main] --- main.BootMongoDB                         : Starting BootMongoDB on VancedeMacBook-Pro.local with PID 6962 (/Users/vancezhao/example/BootToyMongoDB/target/classes started by vancezhao)
+2016-02-14 13:37:37.707 DEBUG 6962 [main] --- o.s.boot.SpringApplication               : Loading source class main.BootMongoDB
+2016-02-14 13:37:37.837  INFO 6962 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7181ae3f: startup date [Sun Feb 14 13:37:37 CST 2016]; root of context hierarchy
+2016-02-14 13:37:38.676 DEBUG 6962 [main] --- o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'main'. Automatic @Repository and @Entity scanning is enabled.
+2016-02-14 13:37:39.693  INFO 6962 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-02-14 13:37:39.709 DEBUG 6962 [main] --- utoConfigurationReportLoggingInitializer : 
+
+
+=========================
+AUTO-CONFIGURATION REPORT
+=========================
+
+
+Positive matches:
+-----------------
+
+   MessageSourceAutoConfiguration
+      - @ConditionalOnMissingBean (types: org.springframework.context.MessageSource; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   MongoRepositoriesAutoConfiguration
+      - @ConditionalOnClass classes found: com.mongodb.Mongo,org.springframework.data.mongodb.repository.MongoRepository (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JmxAutoConfiguration
+      - @ConditionalOnClass classes found: org.springframework.jmx.export.MBeanExporter (OnClassCondition)
+      - SpEL expression on org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration: ${spring.jmx.enabled:true} (OnExpressionCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.jmx.export.MBeanExporter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoAutoConfiguration
+      - @ConditionalOnClass classes found: com.mongodb.Mongo (OnClassCondition)
+
+   MongoAutoConfiguration#mongo
+      - @ConditionalOnMissingBean (types: com.mongodb.Mongo; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoTemplateAutoConfiguration
+      - @ConditionalOnClass classes found: com.mongodb.Mongo,org.springframework.data.mongodb.core.MongoTemplate (OnClassCondition)
+
+   MongoTemplateAutoConfiguration#mongoTemplate
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.core.MongoTemplate; SearchStrategy: all) found no beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   RabbitAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.amqp.rabbit.core.RabbitTemplate,com.rabbitmq.client.Channel (OnClassCondition)
+
+   AopAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.aspectj.lang.annotation.Aspect,org.aspectj.lang.reflect.Advice (OnClassCondition)
+
+   BatchAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.batch.core.launch.JobLauncher,org.springframework.jdbc.core.JdbcOperations (OnClassCondition)
+
+   JpaRepositoriesAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.data.jpa.repository.JpaRepository (OnClassCondition)
+
+   DataSourceAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.jdbc.core.JdbcTemplate (OnClassCondition)
+
+   JmsTemplateAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.jms.core.JmsTemplate,javax.jms.ConnectionFactory (OnClassCondition)
+
+   DeviceResolverAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.mobile.device.DeviceResolverHandlerInterceptor,org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver (OnClassCondition)
+
+   HibernateJpaAutoConfiguration
+      - did not find HibernateEntityManager class (HibernateJpaAutoConfiguration.HibernateEntityManagerCondition)
+
+   ReactorAutoConfiguration
+      - required @ConditionalOnClass classes not found: reactor.spring.context.config.EnableReactor (OnClassCondition)
+
+   RedisAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.data.redis.connection.lettuce.LettuceConnection,org.springframework.data.redis.core.RedisOperations,com.lambdaworks.redis.RedisClient (OnClassCondition)
+
+   FallbackWebSecurityAutoConfiguration
+      - SpEL expression on org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration: !${security.basic.enabled:true} (OnExpressionCondition)
+
+   SecurityAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.security.authentication.AuthenticationManager (OnClassCondition)
+
+   ThymeleafAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.thymeleaf.spring4.SpringTemplateEngine (OnClassCondition)
+
+   DispatcherServletAutoConfiguration
+      - web application classes not found (OnWebApplicationCondition)
+
+   EmbeddedServletContainerAutoConfiguration
+      - web application classes not found (OnWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration
+      - required @ConditionalOnClass classes not found: org.springframework.http.converter.HttpMessageConverter (OnClassCondition)
+
+   MultipartAutoConfiguration
+      - required @ConditionalOnClass classes not found: javax.servlet.Servlet,org.springframework.web.multipart.support.StandardServletMultipartResolver (OnClassCondition)
+
+   ServerPropertiesAutoConfiguration
+      - web application classes not found (OnWebApplicationCondition)
+
+   WebMvcAutoConfiguration
+      - web application classes not found (OnWebApplicationCondition)
+
+   WebSocketAutoConfiguration
+      - required @ConditionalOnClass classes not found: javax.servlet.Servlet,org.apache.catalina.startup.Tomcat,org.springframework.web.socket.WebSocketHandler,org.apache.tomcat.websocket.server.WsSci (OnClassCondition)
+
+
+
+2016-02-14 13:37:40.382  INFO 6962 [main] --- main.BootMongoDB                         : result of getSku is []
+2016-02-14 13:37:40.526  INFO 6962 [main] --- main.BootMongoDB                         : result of getAvailableSku is []
+2016-02-14 13:37:40.676  INFO 6962 [main] --- main.BootMongoDB                         : result of availableSkuCustom is []
+2016-02-14 13:37:40.680  INFO 6962 [main] --- main.BootMongoDB                         : Started BootMongoDB in 3.988 seconds (JVM running for 5.219)
+2016-02-14 13:37:40.681  INFO 6962 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7181ae3f: startup date [Sun Feb 14 13:37:37 CST 2016]; root of context hierarchy
+2016-02-14 13:37:40.683  INFO 6962 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
