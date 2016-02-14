@@ -11,9 +11,11 @@ import org.apache.thrift.server.TServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +24,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @ComponentScan
 @SpringBootApplication
-public class BootMongoDB {
+public class BootMongoDB implements CommandLineRunner {
 
   @Autowired
   private ProductService productService;
@@ -32,6 +34,7 @@ public class BootMongoDB {
   public void run(String... args) throws Exception {
     productService.saveProuct();
 
+    logger.info("Save the Product");
     List<Product> sku = productService.getSku("NEX.6");
     logger.info("result of getSku is {}", sku);
     List<Product> availableSku = productService.getAvailableSku("NEX.6");
@@ -45,6 +48,7 @@ public class BootMongoDB {
   }
 
   @Bean
+  @ConditionalOnMissingBean(TProtocolFactory.class)
   public TProtocolFactory tProtocolFactory() {
     //We will use binary protocol, but it's possible to use JSON and few others as well
     return new TBinaryProtocol.Factory();
