@@ -19,6 +19,7 @@
   <modules>
     <module>boat-api</module>
     <module>boat-mongodb</module>
+    <module>boat-etcd</module>
   </modules>
 
 </project>
